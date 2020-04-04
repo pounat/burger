@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Tab Title -->
+    <title>Eat da Burger!</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <!-- Custom CSS Styling -->
+    <link rel="stylesheet" href="assets/css/burger_style.css">
+
+  </head>
+
+  <body>
+
+    <!-- Page Container -->
+    <div class="container-fluid">
+    <center>
+      <div class="row">
+      <img src="assets/img/burgerimg.png" alt="Burger Img">
+    <div class="jumbotron">
+    <h1>Eat Da Burger!</h1>      
+    <p>Choose a Burger from the list. Then devour it. <br> 
+    Enter a Burger of your choice to the list using the submit form below. The list on the left keeps track of what you devoured.</p>    
+
+    
+        
+    </center>
+    
+
+      <br>
+      
+
+      <!-- Burger Content from index.handlebars -->
+      {{{body}}}
+
+
+      <br><br>
+
+      <!-- Input New Burgers Form -->
+      <form action="burger/create" method="POST"> 
+        
+        <!-- Text Area Input -->
+        <div class="row">
+          <!-- Empty Div to help center textarea -->
+          <div class="col-md-3"></div> 
+
+          <!-- Burger Input Box -->
+          <div class="form-group col-md-6">
+            <center><label for="new_burger" class="submitFont">Request a new burger!</label></center>
+            <textarea class="form-control" type="text" columns="6" rows="2" id="new_burger required value="" name="burger_name"></textarea>
+          </div>
+         
+          <div class="col-md-3"></div> 
+        </div>
+      
+        <!-- Submit Button -->
+        <center>
+          <button id="submit-button" type="submit" class="btn btn-danger">Make my Burger!</button>
+        </center>
+      </form>
+      <br>
+    </div>
+  </body>
+</html> 
